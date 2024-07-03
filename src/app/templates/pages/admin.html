@@ -1,0 +1,38 @@
+{% include '../components/aside.html' %}
+
+<main id="admin">
+    <h2>BubbleTea</h2>
+
+    <button class="action">Ajouter une boisson</button>
+    
+    {% if drink_list is not None %}
+    <table class="drinks">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>photo</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for drink in drink_list %}
+            <tr>
+                <td class="name">{{ drink.name }}</td>
+                <td class="photo">{{ drink.photo }}</td>
+                <td class="description">{{ drink.description }}</td>
+                <td class="price">€ {{ drink.price }}</td>
+                <td class="action" data-id="{{ drink.id }}">Modifier</td>
+                <td class="action" data-id="{{ drink.id }}">Supprimer</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+        <p>Aucun produits trouvé</p>
+    {% endif %}
+</main>
+
+{% include '../components/modal.html' %}

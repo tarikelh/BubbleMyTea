@@ -1,0 +1,15 @@
+<header id="header">
+    <a href="/"><i class="logo-icon"></i></a>
+
+    <h1>Bubble my Tea</h1>
+
+    {% with paths="/dashboard/"|add:",/me/,/admin/,/" %}
+        {% if request.path in paths %}
+        <figure class="avatar">
+            <img src="/static/images/no-avatar.webp" alt="avatar" />
+        </figure>
+        {% else %}
+        <div class="block"></div>
+        {% endif %}
+    {% endwith %}
+</header>

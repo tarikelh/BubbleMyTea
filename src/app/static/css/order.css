@@ -1,0 +1,122 @@
+#order {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  height: calc(100% - 154.8px);
+}
+
+#showcase {
+  display: flex;
+  gap: 25px;
+  padding: 25px;
+}
+
+.carditem {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  width: 275px;
+  height: 300px;
+  box-shadow: 0 0 .5vw #0000001a;
+}
+
+.carditem figure {
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.carditem figure img {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.carditem figure figcaption .description {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  padding: 5px;
+  height: 42px;
+  max-height: 42px;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.carditem .price {
+  font-weight: 700;
+  text-align: right;
+}
+
+#cart {
+  border-left: 1px solid #333;
+  background-color: #f2f2f2;
+}
+
+#cart .cartlist {
+  height: calc(100% - 100px);
+}
+
+#cart .total {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid #333;
+  height: 50px;
+}
+
+#cart .submitcart {
+  cursor: pointer;
+  border: none;
+  border-top: 1px solid #333;
+  width: 100%;
+  height: 50px;
+  background-color: #42b992;
+  color: #f2f2f2;
+  font-weight: 700;
+}
+
+
+#order + .modal .container {
+  width: 375px;
+  width: 400px;
+  margin-top: 15px;
+}
+
+#order + .modal figure {
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+#order + .modal figure img {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#order + .modal figure figcaption .description {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  padding: 5px;
+  height: 42px;
+  max-height: 42px;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+#order + .modal .price {
+  font-weight: 700;
+  text-align: right;
+}
+
+#order + .modal footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}

@@ -1,0 +1,182 @@
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+form {
+    width: 320px;
+}
+
+form .formdata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+form .formdata:focus-within {
+    border: 2px solid #42b992;
+}
+
+form .formdata label {
+    background-color: #f2f2f2;
+}
+
+form .formdata input {
+    margin-left: 5px;
+    padding: 7px 8px;
+    border: none;
+    outline: none;
+    height: 48px;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid #333;
+}
+
+#header h1 {
+    font-size: 50px
+}
+
+#header .block {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+#header .avatar {
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    opacity: .75;
+}
+
+.avatar {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+.menu .close {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    border: none;
+    width: 15px;
+    height: 18px;
+    background-color: transparent;
+}
+
+.menu .close.xmark-icon::before {
+    background-color: #f2f2f2;
+}
+
+.menu header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    padding: 15px;
+    width: 250px;
+    height: 151px;
+}
+
+.menu header figure {
+    background-color: #f2f2f2;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 151px);
+}
+
+.menu ul li {
+    padding: 15px;
+}
+
+.menu ul li:last-child {
+    border-top: 1px solid #fcfcfc;
+    margin-top: auto;
+}
+
+.menu ul li a {
+    color: #f2f2f2;
+}
+
+.menu .disabled {
+    color: #666;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.submit {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    background-color: #42b992;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.submit:hover {
+    opacity: .75;
+}
+
+.question {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.question a {
+    color: #42b992
+}
+
+.question a:hover {
+    text-decoration: underline;
+}
+
+.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

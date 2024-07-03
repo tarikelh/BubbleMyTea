@@ -1,0 +1,30 @@
+<main id="login">
+    {% if messages %}
+    <div class="toast">
+        {% for message in messages %}
+        <p class="errormessage">{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="formdata">
+            <label for="email" class="user-label">
+                <i class="user-icon"></i>
+            </label>
+            <input id="email" name="email" type="email" placeholder="Email"/>
+        </div>
+        
+        <div class="formdata">
+            <label for="password" class="lock-label">
+                <i class="lock-icon"></i>
+            </label>
+            <input id="password" name="password" type="password" placeholder="Mot de passe" />
+        </div>
+
+        <button class="submit" type="submit">Se connecter</button>
+    </form>
+
+    <p class="question">Vous n'avez pas de compte ? <a href="/register">S'inscrire</a></p>
+</main>

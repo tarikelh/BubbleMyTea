@@ -1,0 +1,26 @@
+<aside class="menu" style="display: none">
+  <button class="close xmark-icon"></button>
+
+    <header>
+        <figure class="avatar">
+            <img src="/static/images/no-avatar.webp" alt="avatar" />
+        </figure>
+
+        <h3 class="name">Tony Stark</h3>
+    </header>
+
+    <ul>
+        {% if request.path == '/me/' %}
+        <li><a class="disabled" href="#">Mon Profil</a></li>
+        <li><a href="/dashboard">Mes commandes</a></li>
+        {% elif request.path == '/dashboard/' %}
+        <li><a href="/me">Mon Profil</a></li>
+        <li><a class="disabled" href="#">Mes commandes</a></li>
+        {% elif request.path == '/' %}
+        <li><a href="/me">Mon Profil</a></li>
+        <li><a href="/dashboard">Mes commandes</a></li>
+        {% endif %}
+
+        <li><a href="/logout">Se déconnecter</a></li>
+    </ul>
+</aside>

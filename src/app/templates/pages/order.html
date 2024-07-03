@@ -1,0 +1,38 @@
+{% include '../components/aside.html' %}
+
+<main id="order" data-drinks="{{ drink_list }}" data-toppings="{{ topping_list }}">
+    {% if drink_list is not None %}
+    <ul id="showcase" class="cardlist">
+        {% for drink in drink_list %}
+        <li class="carditem" data-id="{{ drink.id }}" data-name="{{ drink.name }}" data-photo="{{ drink.photo }}" data-description="{{ drink.description }}" data-price="{{ drink.price }}">
+            <h3>{{ drink.name }}</h3>
+            <figure>
+                <img src="{{ drink.photo }}" alt="{{ drink.name }} picture" />
+                <figcaption>
+                    <div class="description">{{ drink.description }}</div>
+                    <div class="price">{{ drink.price }}.00 €</div>
+                </figcaption>
+            </figure>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% else %}
+    <div id="showcase">
+        <p>Aucun produits trouvé</p>
+    </div>
+    {% endif %}
+
+    <div id="cart">
+        <ul class="cartlist"></ul>
+
+        <div class="total">
+            <h4>TOTAL</h4>
+            <p id="carttotal">--.-- €</p>
+        </div>
+
+        <button class="submitcart" type="submit">PAYER</button>
+    </div>
+</main>
+
+{% include '../components/modal.html' %}

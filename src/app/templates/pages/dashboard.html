@@ -1,0 +1,42 @@
+{% include '../components/aside.html' %}
+
+<main id="dashboard">
+    <h2>My Orders</h2>
+
+    <table class="orders">
+        <thead>
+            <tr>
+                <th>Commande #</th>
+                <th>Date</th>
+                <th>Order Total</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="numberorder">000000</td>
+                <td class="date">dd/mm/yyyy</td>
+                <td class="price">€ 00.00</td>
+                <td class="status"><span>En cours</span></td>
+                <td class="vieworder">View Order</td>
+            </tr>
+            <tr>
+                <td class="numberorder">000000</td>
+                <td class="date">dd/mm/yyyy</td>
+                <td class="price">€ 00.00</td>
+                <td class="status"><span>Terminé</span></td>
+                <td class="vieworder">View Order</td>
+            </tr>
+            <tr>
+                <td class="numberorder">000000</td>
+                <td class="date">dd/mm/yyyy</td>
+                <td class="price">€ 00.00</td>
+                <td class="status"><span>Annulé</span></td>
+                <td class="vieworder">View Order</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+{% include '../components/modal.html' %}

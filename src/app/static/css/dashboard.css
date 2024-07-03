@@ -1,0 +1,38 @@
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#dashboard h2 {
+    width: 75%;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#dashboard table {
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 75%;
+    text-align: left;
+}
+
+#dashboard table tr {
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+}
+
+.status span {
+    padding: 5px;
+    border-radius: 5px;
+    color: #f2f2f2;
+}
+
+.vieworder {
+    cursor: pointer;
+    color: #0096c7;
+    font-size: 15px;
+}

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble My Tea</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="overlay" style="display: none"></div>
+
+    {% include 'components/header.html' %}
+
+    {% if request.path == '/login/' %}
+        {% include 'pages/login.html' %}
+    {% elif request.path == '/register/' %}
+        {% include 'pages/register.html' %}
+    {% elif request.path == '/dashboard/' %}
+        {% include 'pages/dashboard.html' %}
+        <script type="module" src="{% static 'js/dashboard.js' %}"></script>
+    {% elif request.path == '/me/' %}
+        {% include 'pages/profile.html' %}
+    {% elif request.path == '/admin/' %}
+        {% include 'pages/admin.html' %}
+        <script type="module" src="{% static 'js/admin.js' %}"></script>
+    {% elif request.path == '/' %}
+        {% include 'pages/order.html' %}
+        <script type="module" src="{% static 'js/order.js' %}"></script>
+    {% endif %}
+
+    {% with paths="/dashboard/"|add:",/me/,/admin/,/order/" %}
+        {% if request.path in paths %}
+            <script type="module" src="{% static 'js/aside.js' %}"></script>
+            <script type="module" src="{% static 'js/overlay.js' %}"></script>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
